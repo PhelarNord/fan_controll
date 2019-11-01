@@ -12,15 +12,16 @@ fanSpeed(){
     if(temp_c<=60){
 
         fan.servoWrite(pulseWidthLow);
+        console.log('Low',temp_c);
         
 
     }
     else{
 
         fan.servoWrite(pulseWidthHigh)
+        console.log('High',temp_c);
         
     }
 }
 setTimeout(fanSpeed,100000);
 
-console.log(temp_c);
