@@ -15,7 +15,7 @@ fanSpeed(){
         
 
     }
-    else if(){
+    else{
 
         fan.servoWrite(pulseWidthHigh)
         
