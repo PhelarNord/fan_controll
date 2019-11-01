@@ -1,0 +1,19 @@
+{
+  "name": "fan_controll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fanControll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhelarNord/fan_controll.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhelarNord/fan_controll/issues"
+  },
+  "homepage": "https://github.com/PhelarNord/fan_controll#readme"
+}
