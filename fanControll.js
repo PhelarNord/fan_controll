@@ -8,7 +8,7 @@ const pulseWidthLow = 15;
 const pulseWidthHigh = 25;
 
 
-fanSpeed(){
+fanSpeed();{
     if(temp_c<=60){
 
         fan.servoWrite(pulseWidthLow);
@@ -18,7 +18,7 @@ fanSpeed(){
     }
     else{
 
-        fan.servoWrite(pulseWidthHigh)
+        fan.servoWrite(pulseWidthHigh);
         console.log('High',temp_c);
         
     }
