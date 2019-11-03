@@ -16,6 +16,7 @@ function fanSpeed();{
 
         fan.pwmWrite(low);
         fan.getPwmFrequency();
+        console.log(fan.pwmWrite());
         console.log('Low',temp_c);
 
         
