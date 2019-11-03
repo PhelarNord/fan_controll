@@ -15,8 +15,7 @@ function fanSpeed(){
     if(temp_c<=60){
 
         fan.pwmWrite(low);
-        fan.getPwmFrequency();
-        console.log(fan.pwmWrite());
+        console.log(fan.getPwmFrequency());
         console.log('Low',temp_c);
 
         
