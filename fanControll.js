@@ -7,13 +7,17 @@ var temp_c = temp/1000;
 const high = 255;
 const low = 100;
 
+fan.pwmFrequency(8000);
+
 setInterval(fanSpeed,5000);
 
 function fanSpeed();{
     if(temp_c<=60){
 
         fan.pwmWrite(low);
+        fan.getPwmFrequency();
         console.log('Low',temp_c);
+
         
 
     }
