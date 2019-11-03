@@ -11,7 +11,7 @@ fan.pwmFrequency(8000);
 
 setInterval(fanSpeed,5000);
 
-function fanSpeed();{
+function fanSpeed(){
     if(temp_c<=60){
 
         fan.pwmWrite(low);
