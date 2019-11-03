@@ -2,8 +2,8 @@ const fs = require('fs');
 const Gpio = require('pigpio').Gpio;
 const fan = new Gpio(10, {mode: Gpio.OUTPUT});
 
-var temp = fs.readFileSync('/sys/class/thermal/thermal_zone0/temp');
-var temp_c = temp/1000;
+var tempFile ='/sys/class/thermal/thermal_zone0/temp';
+
 const high = 255;
 const low = 100;
 
@@ -12,6 +12,10 @@ fan.pwmFrequency(8000);
 setInterval(fanSpeed,5000);
 
 function fanSpeed(){
+
+    var temp=fs.readFileSync(tempFile);
+    var temp_c = temp/1000;
+
     if(temp_c<=60){
 
         fan.pwmWrite(low);
