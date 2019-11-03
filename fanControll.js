@@ -1,14 +1,15 @@
 const fs = require('fs');
-const gpio = require('pigpio');
-const fan = new gpio(10, {mode: gpio.OUTPUT});
+const Gpio = require('pigpio').Gpio;
+const fan = new gpio(10, {mode: Gpio.OUTPUT});
 
 var temp = fs.readFileSync('/sys/class/thermal/thermal_zone0/temp');
 var temp_c = temp/1000;
-const pulseWidthLow = 15;
-const pulseWidthHigh = 25;
+const pulseWidthLow = 1000;
+const pulseWidthHigh = 2000;
 
+setTimeout(fanSpeed,100000);
 
-fanSpeed();{
+function fanSpeed();{
     if(temp_c<=60){
 
         fan.servoWrite(pulseWidthLow);
@@ -23,5 +24,4 @@ fanSpeed();{
         
     }
 }
-setTimeout(fanSpeed,100000);
 
