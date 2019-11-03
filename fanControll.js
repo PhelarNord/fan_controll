@@ -4,8 +4,8 @@ const fan = new Gpio(10, {mode: Gpio.OUTPUT});
 
 var tempFile ='/sys/class/thermal/thermal_zone0/temp';
 
-const high = 255;
-const low = 100;
+const high = 0;
+const low = 255;
 
 fan.pwmFrequency(8000);
 
@@ -19,7 +19,7 @@ function fanSpeed(){
     if(temp_c<=60){
 
         fan.pwmWrite(low);
-        console.log(fan.getPwmFrequency());
+        //console.log(fan.getPwmFrequency());
         console.log('Low',temp_c);
 
         
