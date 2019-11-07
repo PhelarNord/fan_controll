@@ -16,14 +16,14 @@ function fanSpeed(){
     var temp=fs.readFileSync(tempFile);
     var temp_c = temp/1000;
 
-    if(temp_c=>60){
+    if(temp_c>=50){
         
         fan.pwmWrite(high);
         //console.log(fan.getPwmFrequency());
-        console.log('Cooling off.. ',temp_c);        
+        console.log('Starting fan  ',temp_c);        
 
     }
-            if(temp_c => 37){     
+            if(temp_c<=43){     
         
             fan.pwmWrite(Low);
             console.log('Cooling off... ',temp_c);
